@@ -1,0 +1,12 @@
+.header-container {
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.add-button-part {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+}

@@ -1,0 +1,7 @@
+<p-card header="{{todoCard.title}}" [style]="{width: '360px'}">
+  <div class="action-card">
+    <div class="card-description">{{todoCard.description}}</div>
+    <div ngClass="todoCard.isCompleted?'card-completed':'card-not-completed'">}</div>
+  </div>
+  <div class="card-date" *ngIf="dateCompleted">{{todoCard.dateCompleted}}</div>
+</p-card>

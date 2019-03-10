@@ -1,0 +1,11 @@
+<p-panel [style]="{width: '360px'}">
+  <p-header>
+      <div class="ui-helper-clearfix">
+          <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">{{boardHeader}}</span>
+          
+      </div>
+  </p-header>
+  <div *ngFor="let todoCard of board.todoCards">
+      <app-todo-task [(todoCard)]="todoCard"></app-todo-task>
+  </div>
+</p-panel>
