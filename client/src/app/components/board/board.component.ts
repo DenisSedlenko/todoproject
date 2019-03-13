@@ -26,6 +26,7 @@ export class BoardComponent implements OnInit, OnDestroy {
 
   boardsSubscription: Subscription;
   todosSubscription: Subscription;
+  todosAsObservableSubscription: Subscription;
 
   constructor(
     private boardService: BoardService,
@@ -37,8 +38,12 @@ export class BoardComponent implements OnInit, OnDestroy {
       _ => this.isLoading = false,
       _ => this.isLoading = false
     );
-    this.todosSubscription = this.todoService.asObservable
-      .subscribe(data => this.todoTasks = data);
+    this.todosAsObservableSubscription = this.todoService.asObservable
+      .subscribe(data => {
+        if(data && data.length && this.board.boardId === data[0].boardId) {
+          this.todoTasks = data
+        }
+      });
 
     this.items = [
       { label: 'New task', icon: 'pi pi-fw pi-plus',  command: (event) => {
@@ -88,6 +93,9 @@ export class BoardComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.boardsSubscription) {
       this.boardsSubscription.unsubscribe();
+    }
+    if (this.todosAsObservableSubscription) {
+      this.todosAsObservableSubscription.unsubscribe();
     }
     if (this.todosSubscription) {
       this.todosSubscription.unsubscribe();
