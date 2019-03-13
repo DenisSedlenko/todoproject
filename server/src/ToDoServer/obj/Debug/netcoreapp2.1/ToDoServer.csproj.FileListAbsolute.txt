@@ -1,0 +1,17 @@
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.Common.dll
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.csprojAssemblyReference.cache
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.csproj.CoreCompileInputs.cache
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.RazorAssemblyInfo.cache
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.RazorAssemblyInfo.cs
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.AssemblyInfoInputs.cache
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.AssemblyInfo.cs
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.RazorTargetAssemblyInfo.cache
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.deps.json
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.runtimeconfig.json
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.runtimeconfig.dev.json
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.dll
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.pdb
+D:\My projects\todoproject\server\src\ToDoServer\bin\Debug\netcoreapp2.1\ToDoServer.Common.pdb
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.csproj.CopyComplete
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.dll
+D:\My projects\todoproject\server\src\ToDoServer\obj\Debug\netcoreapp2.1\ToDoServer.pdb

@@ -1,0 +1,63 @@
+.panel {
+    width: 350px;
+    margin: 25px;
+    padding: 10px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.panel .todo-header>div {
+    display: inline-block;
+}
+
+.panel .todo-header .title-part {
+    width: 95%;
+}
+
+.panel .todo-header .close-part {
+    width: 5%;
+}
+
+.panel .action-card {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.panel .action-card>div:last-child {
+    flex: 1;
+}
+
+.panel .action-card>div:first-child {
+    flex: 3;
+}
+
+.panel .action-card .card-description {
+    max-height: 80px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.card-not-completed {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.card-completed {
+    border: 1px solid rgba(93, 240, 8, .7);
+    color: rgba(93, 240, 8, .7);
+}
+
+.panel .action-card .todo-status {
+    text-align: center;
+    font-size: 2em;
+    border-radius: 50%;
+    margin: 15px auto;
+    padding-top: 3px;
+    width: 50px;
+    height: 50px;
+}
+
+.panel .todo-date {
+    color: #827070;
+}

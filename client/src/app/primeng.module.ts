@@ -11,6 +11,10 @@ import { RatingModule } from 'primeng/rating';
 import { ToastModule } from 'primeng/toast';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { MenuModule } from 'primeng/menu';
+import { PaginatorModule } from 'primeng/paginator';
+import { KeyFilterModule } from 'primeng/keyfilter';
 import { MessageService } from 'primeng/api';
 
 @NgModule({
@@ -26,7 +30,11 @@ import { MessageService } from 'primeng/api';
     RatingModule,
     ToastModule,
     InputMaskModule,
-    InputSwitchModule
+    InputSwitchModule,
+    ProgressSpinnerModule,
+    MenuModule,
+    PaginatorModule,
+    KeyFilterModule
   ],
   providers: [
     MessageService
@@ -43,7 +51,11 @@ import { MessageService } from 'primeng/api';
     RatingModule,
     ToastModule,
     InputMaskModule,
-    InputSwitchModule
+    InputSwitchModule,
+    ProgressSpinnerModule,
+    MenuModule,
+    PaginatorModule,
+    KeyFilterModule
   ]
 })
 

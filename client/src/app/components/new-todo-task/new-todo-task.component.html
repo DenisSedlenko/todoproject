@@ -1,3 +1,32 @@
-<p>
-  new-todo-task works!
-</p>
+<div class="new-todo-container">
+  <form [formGroup]="newTodoForm" (ngSubmit)="onSubmit(newTodoForm.value)">
+    <div class="header">
+      <div class="title-part">{{typeModification}} task</div>
+      <div class="close-part"><i (click)="onClose()" class="pi pi-times"></i></div>
+    </div>
+    <div class="action-edit">
+      <div>
+        <label for="title" class="floatLabel">Title</label>
+        <input id="title" formControlName="title" [ngModel]="todo?.title" type="text">
+        <div *ngIf="submitted && controls.title.errors">
+            <p-message severity="error" text="Title is required" *ngIf="controls.title.errors.required"></p-message>
+        </div>  
+      </div>
+      <div>
+        <label for="description" class="floatLabel">Description</label>
+        <input id="description" formControlName="description" [ngModel]="todo?.description" type="text">
+        <div *ngIf="submitted && controls.description.errors">
+            <p-message severity="error" text="Description is required" *ngIf="controls.description.errors.required"></p-message>
+        </div>  
+      </div>
+      <div>
+        <label for="dateCompleted" class="floatLabel">Date</label>
+        <input id="dateCompleted" formControlName="dateCompleted" [ngModel]="todo?.dateCompleted" type="text"> 
+      </div>
+      <div>
+        <input type="submit" value="Save" id="submit">
+      </div>
+    </div>
+    
+  </form>
+</div>

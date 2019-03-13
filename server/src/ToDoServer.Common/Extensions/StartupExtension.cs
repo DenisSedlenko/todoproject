@@ -1,4 +1,8 @@
-﻿namespace ToDoServer.Common.Extensions
+﻿using System.Text;
+using Microsoft.EntityFrameworkCore;
+using ToDoServer.Common.Models;
+
+namespace ToDoServer.Common.Extensions
 {
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.DependencyInjection;
@@ -13,17 +17,22 @@
             this IServiceCollection service, IConfiguration configuration)
         {
             return service.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = configuration["AuthEndpoint"];
-                    options.Audience = configuration["AppId"];
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidateIssuer = false
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+
+                        ValidIssuer = configuration["Issuer"],
+                        ValidAudience = configuration["Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["SecretKey"]))
                     };
                     options.Events = new JwtBearerEvents
                     {
@@ -35,6 +44,11 @@
                         }
                     };
                 });
+        }
+
+        public static IServiceCollection AddInMemoryDatabase(this IServiceCollection service)
+        {
+            return service.AddDbContext<TodoContext>(options => options.UseInMemoryDatabase("TodoDb"));
         }
     }
 }

@@ -1,12 +1,25 @@
 .header-container {
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(41, 39, 51);
   position: relative;
+  text-align: right;
 }
 
-.add-button-part {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translate(0, -50%);
+.account-part {
+  padding: 0 1em;
+}
+
+.account-part>span {
+  text-align: left;
+  color: #fff;
+}
+
+.account-part .account-name {
+  margin-right: .5em;
+}
+
+.header-container> div {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
 }

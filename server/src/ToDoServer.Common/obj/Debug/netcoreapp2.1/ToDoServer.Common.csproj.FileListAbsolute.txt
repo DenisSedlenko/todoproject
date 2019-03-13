@@ -1,0 +1,11 @@
+D:\My projects\todoproject\server\src\ToDoServer.Common\bin\Debug\netcoreapp2.1\ToDoServer.Common.deps.json
+D:\My projects\todoproject\server\src\ToDoServer.Common\bin\Debug\netcoreapp2.1\ToDoServer.Common.dll
+D:\My projects\todoproject\server\src\ToDoServer.Common\obj\Debug\netcoreapp2.1\ToDoServer.Common.csprojAssemblyReference.cache
+D:\My projects\todoproject\server\src\ToDoServer.Common\obj\Debug\netcoreapp2.1\ToDoServer.Common.csproj.CoreCompileInputs.cache
+D:\My projects\todoproject\server\src\ToDoServer.Common\obj\Debug\netcoreapp2.1\ToDoServer.Common.AssemblyInfoInputs.cache
+D:\My projects\todoproject\server\src\ToDoServer.Common\obj\Debug\netcoreapp2.1\ToDoServer.Common.AssemblyInfo.cs
+D:\My projects\todoproject\server\src\ToDoServer.Common\bin\Debug\netcoreapp2.1\ToDoServer.Common.runtimeconfig.json
+D:\My projects\todoproject\server\src\ToDoServer.Common\bin\Debug\netcoreapp2.1\ToDoServer.Common.runtimeconfig.dev.json
+D:\My projects\todoproject\server\src\ToDoServer.Common\bin\Debug\netcoreapp2.1\ToDoServer.Common.pdb
+D:\My projects\todoproject\server\src\ToDoServer.Common\obj\Debug\netcoreapp2.1\ToDoServer.Common.dll
+D:\My projects\todoproject\server\src\ToDoServer.Common\obj\Debug\netcoreapp2.1\ToDoServer.Common.pdb

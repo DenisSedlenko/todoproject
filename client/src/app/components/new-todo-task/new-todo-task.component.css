@@ -1,0 +1,109 @@
+.new-todo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 246, 253, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.header {
+    height: 85px;
+    background-color: rgb(41, 39, 51);
+    color: #fff;
+    padding: 0 20px;
+    font-size: 1.2em;
+}
+
+.header .close-part {
+    text-align: right;
+}
+
+.header .title-part {
+    font-size: 1.8em;
+}
+
+.header>div {
+    line-height: 85px;
+    width: 50%;
+    display: inline-block;
+}
+
+form {   
+    background: #fff;
+    max-width: 70vw;
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+}
+
+form .action-edit {
+    padding: 3em 3em 2em;
+}
+
+form .action-edit div {
+    margin: 0 0 2em 0;
+    position: relative;
+}
+
+form .action-edit div input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    margin:0;
+}
+
+form .action-edit div input[type="text"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 1.6em;
+    padding: .5em .3em;
+    border-radius: 2px;
+}
+    
+form .action-edit div input[type="text"]:focus {
+    background: #fff
+}
+    
+form .action-edit div input[type="submit"] {
+    background: rgba(148,186,101,0.7);
+    box-shadow: 0 3px 0 0 darken(rgba(148,186,101,0.7), 10%);
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1.6em;
+    line-height: 1.2em;
+    margin: 1.4em 0 0;
+    outline: none;
+    padding: .6em 0;
+    text-shadow: 0 1px #68B25B;
+}
+    
+form .action-edit div input[type="submit"]:hover {
+    background: rgba(148,175,101,1);
+    text-shadow:0 1px 3px darken(rgba(148,186,101,0.7), 30%);
+}
+
+form .action-edit div label{
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    color: #999;
+    font-size: 16px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 400;
+    background-color: rgba(255,255,255,0);
+}
+
+form .action-edit div label.floatLabel{
+    top: -11px;
+    background-color: rgba(255,255,255,0.8);
+    font-size: 14px;   
+}

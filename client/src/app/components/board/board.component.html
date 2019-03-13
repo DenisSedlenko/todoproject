@@ -1,11 +1,24 @@
-<p-panel [style]="{width: '360px'}">
-  <p-header>
-      <div class="ui-helper-clearfix">
-          <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">{{boardHeader}}</span>
-          
-      </div>
-  </p-header>
-  <div *ngFor="let todoCard of board.todoCards">
-      <app-todo-task [(todoCard)]="todoCard"></app-todo-task>
-  </div>
-</p-panel>
+<div class="panel">
+    <div class="board-header">
+        <h2 >{{board.title}}</h2>
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+        <span (click)="menu.toggle($event)"><i class="pi pi-fw pi-ellipsis-v"></i></span>
+    </div>
+    <div class="custom-scroll-y" style="height:73vh;overflow-y: auto">
+        <div *ngFor="let todo of todoTasks">
+                <app-todo-task [(todo)]="todo"></app-todo-task>
+        </div>
+    </div>
+</div>
+<app-new-todo-task *ngIf="isEditingTodoForm" 
+    [typeModification]="typeModificationTodo"
+    (onSave)="onSaveTodo($event)"
+    (onCloseEvent)="onCloseEditTodoForm($event)">
+</app-new-todo-task>
+<app-new-board *ngIf="isEditingBoardForm"
+    [title]="board.title"
+    [typeModification]="typeModificationBoard"
+    (onSave)="onSaveBoard($event)"
+    (onCloseEvent)="onCloseEditBoardForm($event)">
+</app-new-board>
+<app-loading *ngIf="isLoading"></app-loading>

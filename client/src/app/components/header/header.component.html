@@ -1,5 +1,18 @@
 <section class="header-container">
   <div class="add-button-part">
-      <p-button class="ui-button-secondary" icon="pi pi-plus" (click)=""></p-button>
+      <p-button class="ui-button-secondary" icon="pi pi-plus" (click)="isEditingBoardForm=!isEditingBoardForm"></p-button>
+  </div>
+  <div class="account-part">
+    <span class="account-name">{{user?.email}}</span>
+    <span><i class="pi pi-chevron-down" (click)="menu.toggle($event)"></i></span>
+    <div style="text-align: left; line-height: normal;">
+      <p-menu #menu [popup]="true" [model]="items"></p-menu>
+    </div>
   </div>
 </section>
+<app-new-board *ngIf="isEditingBoardForm"
+    [typeModification]="typeModificationBoard"
+    (onSave)="onSaveBoard($event)"
+    (onCloseEvent)="onCloseEditBoardForm($event)">
+</app-new-board>
+<app-loading *ngIf="isLoading"></app-loading>

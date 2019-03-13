@@ -1,7 +1,29 @@
-<p-card header="{{todoCard.title}}" [style]="{width: '360px'}">
-  <div class="action-card">
-    <div class="card-description">{{todoCard.description}}</div>
-    <div ngClass="todoCard.isCompleted?'card-completed':'card-not-completed'">}</div>
-  </div>
-  <div class="card-date" *ngIf="dateCompleted">{{todoCard.dateCompleted}}</div>
-</p-card>
+<div class="panel">
+    <div class="todo-header">
+      <div class="title-part">{{todo.title}}</div>
+      <div class="close-part">        
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+        <span (click)="menu.toggle($event)"><i class="pi pi-fw pi-ellipsis-v"></i></span>
+      </div>
+    </div>
+    <div class="action-card">
+      <div>
+          <div class="card-description">{{todo.description}}</div>
+      </div>
+      <div>
+        <div class="todo-status" (click)="onClickCompleted()" [ngClass]="todo.isCompleted ? 'card-completed' : 'card-not-completed'">
+          <i class="pi pi-check"></i>
+        </div>
+      </div>
+    </div>
+    <div class="todo-date" *ngIf="todo.dateCompleted">
+      <i class="pi pi-clock"></i> {{todo.dateCompleted}}
+    </div>
+</div>
+<app-new-todo-task *ngIf="isEditingForm" 
+  [todo]="todo"
+  [typeModification]="typeModification"
+  (onSave)="onSave($event)"
+  (onCloseEvent)="onCloseEditForm($event)">
+</app-new-todo-task>
+<app-loading *ngIf="loading"></app-loading>

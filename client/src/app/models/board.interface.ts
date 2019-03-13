@@ -1,5 +1,10 @@
-import { TodoTask } from './todo-task.interface';
+import { Todo } from './todo-task.interface';
+import { User } from './user.interface';
+
 export interface Board {
+  boardId: number;
   title: string;
-  todoTask: TodoTask
+  todos: Array<Todo>
+  userId: number;
+  user: User;
 }

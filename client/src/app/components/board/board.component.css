@@ -1,0 +1,43 @@
+.custom-scroll-ycustom-scroll-y {
+    overflow: hidden;
+    overflow-y: auto;
+}
+  
+.custom-scroll-y::-webkit-scrollbar {
+    width: 9px;
+}
+  
+.custom-scroll-y::-webkit-scrollbar-thumb {
+    background-color: #656E77;
+    outline: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.panel {
+    display: inline-block;
+    margin-right: 20px;
+    width: 400px;
+    max-height: 85vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 3px;
+}
+
+.panel .board-header {
+    height: 70px;
+    background-color: rgb(41, 39, 51);
+    color: #fff;
+    padding: 0 20px;
+}
+
+.panel .board-header>span {
+    text-align: right;
+}
+
+.panel .board-header>h2,
+.panel .board-header>span {
+    margin: 0;
+    line-height: 70px;
+    width: 50%;
+    display: inline-block;
+}

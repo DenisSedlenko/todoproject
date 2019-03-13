@@ -1,0 +1,21 @@
+<div class="login-container">
+  <div class="login">
+    <div class="login-triangle"></div>
+    
+    <h2 class="login-header">Log in</h2>
+  
+    <form class="login-wrapper" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+          <input type="email" formControlName="email" placeholder="Email">
+          <div *ngIf="submitted && controls.email.errors">
+              <p-message severity="error" text="Email is required" *ngIf="controls.email.errors.required"></p-message>
+              <p-message severity="error" text="Email is wrong" *ngIf="controls.email.errors.email"></p-message>
+          </div>  
+        </div>
+        <div><input type="submit" value="Log in"></div>
+    </form>
+  </div>
+</div>
+<app-loading *ngIf="loading"></app-loading>
+
+

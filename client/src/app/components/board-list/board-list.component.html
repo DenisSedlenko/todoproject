@@ -1,3 +1,5 @@
-<div class="borad-container" *ngFor="let board of boardList">
+<div class="borad-container" style="display: inline-block;"  *ngFor="let board of boardList">
   <app-board [(board)]="board"></app-board>
 </div>
+<p-paginator [rows]="3" [totalRecords]="countBoards" (onPageChange)="paginate($event)"></p-paginator>
+<app-loading *ngIf="isLoading"></app-loading>
